@@ -1,0 +1,10 @@
+{application,posm,
+             [{description,"POS Middleware"},
+              {vsn,"0.0.1"},
+              {registered,[]},
+              {applications,[kernel,stdlib,mnesia,ranch,erlcron]},
+              {mod,{posm_app,[]}},
+              {env,[{mnesia_dir,"/Users/frepond/posm/data"},
+                    {tcp_pool_size,100},
+                    {posm_port,5555}]},
+              {modules,[posm_app,posm_protocol,posm_sup,posm_tasks]}]}.

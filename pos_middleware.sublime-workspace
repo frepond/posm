@@ -1,0 +1,680 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"error_",
+				"error_logger"
+			],
+			[
+				"pos_middle",
+				"pos_middleware_app"
+			],
+			[
+				"datal",
+				"datalogSrc"
+			],
+			[
+				"ng-cl",
+				"ng-click	angular click"
+			],
+			[
+				"cons",
+				"consumersData"
+			],
+			[
+				"bc_",
+				"bc_href"
+			],
+			[
+				"cv",
+				"cvTemplate"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "apps/posm/src/posm_app.erl",
+			"settings":
+			{
+				"buffer_size": 1032,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "apps/posm/src/posm_protocol.erl",
+			"settings":
+			{
+				"buffer_size": 1604,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rel/reltool.config",
+			"settings":
+			{
+				"buffer_size": 1768,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rebar.config",
+			"settings":
+			{
+				"buffer_size": 230,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "apps/posm/include/posm_data.hrl",
+			"settings":
+			{
+				"buffer_size": 250,
+				"line_ending": "Unix",
+				"name": "-record(txid,  {name,"
+			}
+		},
+		{
+			"file": "apps/posm/src/posm.app.src",
+			"settings":
+			{
+				"buffer_size": 429,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rel/files/sys.config",
+			"settings":
+			{
+				"buffer_size": 588,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "apps/posm/src/posm_tasks.erl",
+			"settings":
+			{
+				"buffer_size": 326,
+				"line_ending": "Unix",
+				"name": "-module(posm_tasks)."
+			}
+		}
+	],
+	"build_system": "Packages/Erlang/Erlang.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"Subli",
+				"SublimeREPL: Erlang"
+			],
+			[
+				"Packa",
+				"Package Control: Disable Package"
+			],
+			[
+				"Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package",
+				"Package Control: Disable Package"
+			],
+			[
+				"Remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Plug",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"Prett",
+				"HTMLPrettify"
+			],
+			[
+				"Pretty",
+				"HTMLPrettify"
+			],
+			[
+				"Pret",
+				"HTMLPrettify"
+			],
+			[
+				"HTM",
+				"HTMLPrettify"
+			],
+			[
+				"H",
+				"HTMLPrettify"
+			],
+			[
+				"Pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"PAc",
+				"Package Control: Remove Package"
+			],
+			[
+				"Tidy",
+				"TidyHTML"
+			],
+			[
+				"Inst",
+				"Package Control: Install Package"
+			],
+			[
+				"forma",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"Ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Install",
+				"Package Control: Install Package"
+			],
+			[
+				"Instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/frepond/Documents/code/pos_middleware/rel/files/sys.config",
+		"/Users/frepond/Documents/code/pos_middleware/rel/posm_node/releases/1/sys.config",
+		"/Users/frepond/Documents/code/pos_middleware/apps/posm/src/apps.config",
+		"/Users/frepond/Documents/code/pos_middleware/deps/ranch/examples/tcp_echo/src/tcp_echo_sup.erl",
+		"/Users/frepond/Documents/code/pos_middleware/rel/files/vm.args",
+		"/Users/frepond/Documents/code/pos_middleware/rel/reltool.config",
+		"/Users/frepond/Documents/code/pos_middleware/apps/pos_middleware/src/posm_protocol.erl",
+		"/Users/frepond/Documents/code/pos_middleware/rebar.config",
+		"/Users/frepond/Documents/code/pos_middleware/apps/posm/src/posm.app.src",
+		"/Users/frepond/Documents/code/pos_middleware/apps/pos_middleware/src/pos_middleware.app.src",
+		"/Users/frepond/Documents/code/pos_middleware/apps/pos_middleware/src/pos_middleware_app.erl",
+		"/Users/frepond/Documents/code/pos_middleware/apps/posm/src/posm_sup.erl",
+		"/Users/frepond/Documents/code/pos_middleware/apps/posm/src/posm_app.erl",
+		"/Users/frepond/Documents/code/pos_middleware/src/pos_middleware_app.erl",
+		"/Users/frepond/Documents/code/pos_middleware/rel/files/mynode.cmd",
+		"/Users/frepond/Documents/code/pos_middleware/rel/files/install_upgrade.escript",
+		"/Users/frepond/Documents/code/pos_middleware/src/pos_middleware.app.src",
+		"/Users/frepond/Documents/code/pos_middleware/src/echo_protocol.erl",
+		"/Users/frepond/Documents/ngineo-xce/code/lsd/rebar.config",
+		"/Users/frepond/Documents/ngineo-xce/code/lsd/deps/webmachine/rebar.config",
+		"/Users/frepond/Documents/ngineo-xce/code/lsd/deps/riak_core/rebar.config",
+		"/Users/frepond/Documents/ngineo-xce/code/lsd/apps/lsd/src/test/query_solver_test.erl",
+		"/Users/frepond/Documents/ngineo-xce/code/lsd/apps/lsd/src/rdf/rdfs.erl",
+		"/Users/frepond/Documents/ngineo-xce/code/lsd/apps/lsd/src/rdf/rdf_datatype.erl",
+		"/Users/frepond/Documents/ngineo-xce/code/lsd/apps/lsd/src/rdf/rdf.erl",
+		"/Users/frepond/Documents/ngineo-xce/code/lsd/apps/lsd/src/owl/owl.erl",
+		"/Users/frepond/Documents/ngineo-xce/code/lsd/apps/lsd/src/owl/ontology_model.erl",
+		"/Users/frepond/Documents/ngineo-xce/code/lsd/apps/lsd/src/lsd_client.erl",
+		"/Users/frepond/Documents/ngineo-xce/code/lsd/Makefile",
+		"/Users/frepond/Documents/ngineo-xce/code/yellow/deps/riak_core/rebar.config",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/scripts/app.js",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/scripts/services/services.js",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/read_multiple.json",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/views/administration/resource_view.html",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/views/partials/resource_view.html",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/views/partials/change_password.html",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/scripts/controllers/administration/resource.js",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/views/relationships/individual_search.html",
+		"/Users/frepond/Documents/xv6/sh.c",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/views/resource/view.html",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/scripts/controllers/administration/datalog.js",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/views/administration/datalog.html",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/backend/consumer.json",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/views/partials/individual_navbar.html",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/backend/consumers.json",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/scripts/controllers/relationships/individual_overview.js",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/scripts/controllers/relationships/individual_search.js",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/views/relationships/individual_profile.html",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/scripts/controllers/sidebar.js",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/bower.json",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/scripts/controllers/relationships/individual_profile.js",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/index.html",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/views/partials/breadcrumb.html",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/scripts/ace-modes/mode-leaplog.js",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/components/ace-builds/src-noconflict/mode-xml2.js",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/components/ace-builds/src-noconflict/mode-leaplog.js",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/components/ace-builds/textarea/src/mode-leaplog.js",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/components/ace-builds/kitchen-sink/docs/markdown.md",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/components/ace-builds/src-min-noconflict/mode-leaplog.js",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/scripts/controllers/administration.js",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/views/resource/datalog.html",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/scripts/modules/lsm_commons.js",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/.gitignore",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/views/relationships/individual_overview.html",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/doc/classes/ActivityParticipationPoli___1259622959.html",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/views/relationships/individual.html",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/component.json",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/scripts/controllers/relationships/individual.js",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/components/ng-grid/build/ng-grid.js",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/scripts/controllers/dashboard.js",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/scripts/layout.js",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/package.json",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/node_modules/twitter-bootstrap/package.json",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/node_modules/angular/package.json",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/node_modules/ng-grid/component.json",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/test/data/consumer.json",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/views/dashboard.html",
+		"/Users/frepond/Documents/ngineo-xce/code/lsm/README.md",
+		"/Users/frepond/Documents/IdeaProjects/tecso-cv/src/main/resources/template.tex",
+		"/Users/frepond/Documents/IdeaProjects/tecso-cv/src/main/java/coop/tecso/asociados/cv/service/PdfCvServiceImpl.java",
+		"/Users/frepond/Documents/IdeaProjects/tecso-cv/src/main/java/coop/tecso/asociados/cv/model/Skill.java"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Users/frepond/Documents/code/pos_middleware",
+			"/Users/frepond/Documents/code/pos_middleware/rel",
+			"/Users/frepond/Documents/ngineo-xce/code/lsd",
+			"/Users/frepond/Documents/ngineo-xce/code/yellow",
+			"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/components/ace-builds/src-noconflict",
+			"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app/components/ace-builds",
+			"/Users/frepond/Documents/ngineo-xce/code/lsm/client/app",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"30",
+			"15000",
+			"(\"|\"",
+			"pos_middleware",
+			"mynode",
+			"-import",
+			"relclean",
+			"webmachine",
+			"mochiweb,",
+			"location",
+			"$location",
+			"complete",
+			"LatexHighlightRules",
+			"mode",
+			">\n",
+			"mode-",
+			"/resource/view",
+			"view.html",
+			"resource",
+			"        <",
+			"individual.js",
+			"Indi",
+			"evalProperty",
+			"getP",
+			"getProperty",
+			"row.getProperty",
+			"sort",
+			"col.field",
+			"row.getProperty",
+			"row.getProperty(col.field)",
+			"{{row.getProperty(col.field)}}",
+			"self.fieldMap[",
+			"self.field",
+			"field",
+			"fieldMap",
+			"build",
+			"buildRow",
+			"columnDefs",
+			"columnsDef",
+			"item.",
+			"parsed",
+			"columns",
+			"data.",
+			"data",
+			"angular.module",
+			"module",
+			"myData ",
+			"myData",
+			"require(",
+			"require",
+			"requiere",
+			"angular.js",
+			"items",
+			"Test",
+			">\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "apps/posm/src/posm_app.erl",
+					"settings":
+					{
+						"buffer_size": 1032,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								514,
+								514
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Erlang/Erlang.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "apps/posm/src/posm_protocol.erl",
+					"settings":
+					{
+						"buffer_size": 1604,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1535,
+								1535
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Erlang/Erlang.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 339.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "rel/reltool.config",
+					"settings":
+					{
+						"buffer_size": 1768,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								960,
+								960
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "rebar.config",
+					"settings":
+					{
+						"buffer_size": 230,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								230,
+								230
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Erlang/Erlang.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "apps/posm/include/posm_data.hrl",
+					"settings":
+					{
+						"buffer_size": 250,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								148,
+								148
+							]
+						],
+						"settings":
+						{
+							"auto_name": "-record(txid,  {name,",
+							"syntax": "Packages/Erlang/Erlang.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "apps/posm/src/posm.app.src",
+					"settings":
+					{
+						"buffer_size": 429,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								243,
+								236
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "rel/files/sys.config",
+					"settings":
+					{
+						"buffer_size": 588,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								562,
+								562
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "apps/posm/src/posm_tasks.erl",
+					"settings":
+					{
+						"buffer_size": 326,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								112,
+								131
+							]
+						],
+						"settings":
+						{
+							"auto_name": "-module(posm_tasks).",
+							"syntax": "Packages/Erlang/Erlang.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.sublimerl_autocompiler":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"app",
+				"client/app/scripts/app.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/ngineo-xce/code/lsd/lsd.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 273.0,
+	"status_bar_visible": true
+}
