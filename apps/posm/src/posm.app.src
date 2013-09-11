@@ -7,6 +7,7 @@
                   kernel,
                   stdlib,
                   mnesia,
+                  odbc,
                   ranch,
                   erlcron
                  ]},
@@ -14,6 +15,8 @@
   {env, [
           {mnesia_dir, "/Users/frepond/posm/data"},
           {tcp_pool_size, 100},
-          {posm_port, 5555}
+          {posm_port, 5555},
+          {conn_string, "dsn=posm"},
+          {select_banks, "select * from dbo.bank"}
         ]}
  ]}.

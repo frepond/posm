@@ -18,7 +18,7 @@
 start(_StartType, _StartArgs) ->
 	{ok, TCP_POOL_SIZE} = application:get_env(posm, tcp_pool_size),
 	{ok, POSM_PORT} = application:get_env(posm, posm_port),
- 	{ok, _} = ranch:start_listener(tcp_echo, TCP_POOL_SIZE,
+ 	{ok, _} = ranch:start_listener(posm_service, TCP_POOL_SIZE,
 		ranch_tcp, [{port, POSM_PORT}], posm_protocol, []),
     posm_sup:start_link().
 
@@ -34,6 +34,7 @@ stop(_State) ->
 simple_test() ->
 	ok = application:start(mnesia),
 	ok = application:start(ranch),
+	ok = application:start(erlcron),
     ok = application:start(posm),
     ?assertNot(undefined == whereis(posm_sup)).
 

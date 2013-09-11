@@ -1,7 +1,13 @@
 %% POSM basic protocol handler.
 
 -module(posm_protocol).
+
 -export([start_link/4, init/4]).
+
+-include_lib("stdlib/include/qlc.hrl").
+
+-include("posm_data.hrl").
+
 
 start_link(Ref, Socket, Transport, Opts) ->
 	Pid = spawn_link(?MODULE, init, [Ref, Socket, Transport, Opts]),
@@ -16,7 +22,8 @@ init(Ref, Socket, Transport, _Opts = []) ->
 	[
 		{"ping", handle_ping()},
 		{"read", handle_read()},
-		{"write", handle_write()}
+		{"write", handle_write()},
+		{"banks", handle_banks()}	
 	]).
 
 %% Socket accept loop with the following protocol
@@ -31,7 +38,9 @@ loop(Socket, Transport) ->
 	case Transport:recv(Socket, 0, 15000) of
 		{ok, Data} ->
 			error_logger:info_msg("Receiving...~p~n", [Data]),
-			{_, Response} = handle_command(Data),
+			{_, Result} = handle_command(Data),
+			error_logger:info_msg("Returning: ~p~n", [Result]),
+			Response = lists:flatten(io_lib:format("~p", [Result])),
 			Transport:send(Socket, Response),
 			loop(Socket, Transport);
 		_ ->
@@ -54,16 +63,22 @@ handle_command(Data) ->
 %% TODO sample command
 handle_write() -> 
 	fun(Args) -> 
-			"write\n"
+			"write"
 	end.
 
 handle_read() -> 
 	fun() ->
-			"read\n"
+			"read"
 	end.
 
 %% keep alive verification
 handle_ping() ->
 	fun() ->
 		"pong"
+	end.
+
+handle_banks() -> 
+	fun() ->
+		Query = qlc:q([B || B <- mnesia:table(posm_bank)]),
+		mnesia:sync_dirty(fun() -> qlc:e(Query) end)
 	end.

@@ -1,6 +1,8 @@
 ## Name of the node
 -name posm_node@127.0.0.1
 
+-mnesia dir '"/Users/frepond/posm/data"'
+
 ## Cookie for distributed erlang
 -setcookie posm_node
 
