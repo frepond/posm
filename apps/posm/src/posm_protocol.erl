@@ -2,7 +2,7 @@
 
 -module(posm_protocol).
 
--export([start_link/4, init/4]).
+-export([start_link/4, init/4, handle_ping/0, handle_banks/0]).
 
 -include_lib("stdlib/include/qlc.hrl").
 
@@ -20,10 +20,10 @@ init(Ref, Socket, Transport, _Opts = []) ->
 %% TODO sample command
 -define (HANDLERS,
 	[
-		{"ping", handle_ping()},
-		{"read", handle_read()},
-		{"write", handle_write()},
-		{"banks", handle_banks()}	
+		{"ping", fun() -> handle_ping() end},
+		{"read", fun() -> handle_read() end},
+		{"write", fun(Args) -> handle_write(Args) end},
+		{"banks", fun() -> handle_banks() end}	
 	]).
 
 %% Socket accept loop with the following protocol
@@ -40,7 +40,10 @@ loop(Socket, Transport) ->
 			error_logger:info_msg("Receiving...~p~n", [Data]),
 			{_, Result} = handle_command(Data),
 			error_logger:info_msg("Returning: ~p~n", [Result]),
-			Response = lists:flatten(io_lib:format("~p", [Result])),
+			if 
+				(not is_binary(Result)) -> Response = lists:flatten(io_lib:format("~p", [Result]))
+				; true 					-> Response = Result
+			end,
 			Transport:send(Socket, Response),
 			loop(Socket, Transport);
 		_ ->
@@ -55,30 +58,23 @@ handle_command(Data) ->
 	case lists:keyfind(Action, 1, ?HANDLERS) of
 		false -> {error, "Unknown handler: " ++ Action};
 		{_, Handler} ->
-			if Args =:= [] -> {ok, Handler()}
-			   ; true 	   -> {ok, Handler(Args)}
+			if 
+				Args =:= [] -> {ok, Handler()}
+				; true 	    -> {ok, Handler(Args)}
 			end
 	end.
 
 %% TODO sample command
-handle_write() -> 
-	fun(Args) -> 
-			"write"
-	end.
+handle_write(Args) -> 
+	<<"write">>.
 
 handle_read() -> 
-	fun() ->
-			"read"
-	end.
+	<<"read">>.
 
 %% keep alive verification
 handle_ping() ->
-	fun() ->
-		"pong"
-	end.
+	<<"pong">>.
 
 handle_banks() -> 
-	fun() ->
-		Query = qlc:q([B || B <- mnesia:table(posm_bank)]),
-		mnesia:sync_dirty(fun() -> qlc:e(Query) end)
-	end.
+	Query = qlc:q([B || B <- mnesia:table(posm_bank)]),
+	mnesia:sync_dirty(fun() -> qlc:e(Query) end).

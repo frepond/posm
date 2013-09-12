@@ -1,0 +1,19 @@
+%%-*- mode: erlang -*-
+{application, posm_rest,
+ [
+  {description, "posm_rest"},
+  {vsn, "1"},
+  {modules, []},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  inets,
+                  crypto,
+                  mochiweb,
+                  webmachine,
+                  posm
+                 ]},
+  {mod, { posm_rest_app, []}},
+  {env, []}
+ ]}.

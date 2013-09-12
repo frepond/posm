@@ -1,3 +1,5 @@
+%% -*- mode: erlang -*-
+%% ex: ft=erlang
 {application, posm,
  [
   {description, "POS Middleware"},
@@ -6,6 +8,7 @@
   {applications, [
                   kernel,
                   stdlib,
+                  sasl,
                   mnesia,
                   odbc,
                   ranch,
