@@ -1,10 +1,8 @@
 /rel/posm_node
 /deps
-/apps/posm/ebin
-/apps/posm/.eunit
+ebin
+.eunit
 
-/pos_middleware.sublime-project
-/pos_middleware.sublime-workspace
 *.sublime-project
 
 *.sublime-workspace
