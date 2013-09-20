@@ -1,10 +1,11 @@
-/rel/posm_node
-/deps
+rel/posm_node
+deps
 ebin
 .eunit
+.idea
 
 *.sublime-project
-
 *.sublime-workspace
+*.iml
 
 .deps_plt

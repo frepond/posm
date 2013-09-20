@@ -1,54 +1,61 @@
-%% @author author <author@example.com>
-%% @copyright YYYY author.
-%% @doc Example webmachine_resource.
+%% @author Federico Repond <federico.repond@tecso.coop>
+%% @copyright Tecso.
+%% @doc Web Machine for REST services.
 
 -module(posm_rest_resource).
 -export([init/1, content_types_provided/2, to_text/2, to_json/2]).
--import(posm_protocol, [handle_banks/0]).
+
+-compile([{parse_transform, rec2json}]).
 
 -include_lib("webmachine/include/webmachine.hrl").
 -include_lib("posm/include/posm_data.hrl").
-
--compile([{parse_transform, rec2json}]).
 
 
 init([]) -> {ok, undefined}.
 
 content_types_provided(ReqData, Context) ->
-	{[{"text/plain",to_text}, {"application/json", to_json}], ReqData, Context}.
+    {[{"text/plain",to_text}, {"application/json", to_json}], ReqData, Context}.
 
 to_text(ReqData, Context) ->
     Result = handle_request(ReqData, Context),
     if 
-    	(not is_binary(Result)) -> Body = lists:flatten(io_lib:format("~p", [Result]))
-    	; true 					-> Body = Result
+        (not is_binary(Result)) -> Body = lists:flatten(io_lib:format("~p", [Result]))
+        ; true                  -> Body = Result
     end,
     {Body, ReqData, Context}.
 
-%% TODO record and record list encoding not working...
+%% TODO record and record list encoding not working as expectedo...
 %% maybe, queries from mnesia should return porpslists
 to_json(ReqData, Context) ->
-	Result = handle_request(ReqData, Context),
-	error_logger:info_msg("Return: ~p", [Result]), 
-	if
-		is_tuple(Result) ->
-			Body = Result:to_json(),
-			error_logger:info_msg("is_tuple: ~p", [Body])
-		; is_list(Result) and not (Result =:= []) ->
-			H = hd(Result),
-			Body = H:to_json(),
-			error_logger:info_msg("is_list: ~p", [Body])
-		; true ->
-			Body = jsx:encode(Result),
-			error_logger:info_msg("is_true: ~p", [Body])
-	end,
-	{Body, ReqData, Context}.
+    Result = handle_request(ReqData, Context),
+    error_logger:info_msg("Return: ~p~n", [Result]), 
+    if
+        is_tuple(Result) ->
+            Body = tuple_to_json_binary(Result)
+        ; is_list(Result) andalso Result =/= [] andalso is_tuple(hd(Result)) ->
+            Body = [<<"[">>, list_to_json_binary(Result), <<"]">>]
+        ; true ->
+            Body = mochijson2:encode(Result)
+    end,
+    {Body, ReqData, Context}.
 
-handle_request(ReqData, Context) ->
-	Path = wrq:disp_path(ReqData),
-	case Path of
-    	"banks" -> hd(handle_banks());
-    	"ping" -> posm_protocol:handle_ping();
-    	_      -> error
+handle_request(ReqData, _Context) ->
+    Path = wrq:disp_path(ReqData),
+    case Path of
+        "banks" -> posm_protocol:handle_banks();
+        "ping" -> posm_protocol:handle_ping();
+        _      -> error
     end.
 
+%% Recursively traverse records converting it to json. In order to do this header containing 
+%% record definition must be included and record accesor .beam should be generated and in the 
+%% path:
+%%   deps/rec2json/rec2json -src=apps/posm/include/*.hrl -dest=apps/posm/ebin -include=include
+-spec tuple_to_json_binary(Record :: tuple()) -> iolist().
+tuple_to_json_binary(Tuple) ->
+    PropList = Tuple:to_json(),
+    mochijson2:encode(PropList).
+
+-spec list_to_json_binary(RecordList :: [tuple()]) -> iolist().
+list_to_json_binary([H | []]) -> [tuple_to_json_binary(H)];
+list_to_json_binary([H | T]) -> [tuple_to_json_binary(H) , <<",">> , list_to_json_binary(T)].

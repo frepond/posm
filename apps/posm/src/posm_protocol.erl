@@ -23,7 +23,7 @@ init(Ref, Socket, Transport, _Opts = []) ->
 		{"ping", fun() -> handle_ping() end},
 		{"read", fun() -> handle_read() end},
 		{"write", fun(Args) -> handle_write(Args) end},
-		{"banks", fun() -> handle_banks() end}	
+		{"banks", fun() -> handle_banks() end}
 	]).
 
 %% Socket accept loop with the following protocol
@@ -50,6 +50,7 @@ loop(Socket, Transport) ->
 			ok = Transport:close(Socket)
 	end.
 
+-spec handle_command(bitstring()) -> {ok, bitstring()} | {error, string()}.
 handle_command(Data) ->
 	String = bitstring_to_list(Data), 
 	[Action | Rest] = string:tokens(String, "|\r\n"),
@@ -65,16 +66,18 @@ handle_command(Data) ->
 	end.
 
 %% TODO sample command
-handle_write(Args) -> 
+handle_write(_Args) ->
 	<<"write">>.
 
 handle_read() -> 
 	<<"read">>.
 
 %% keep alive verification
+-spec handle_ping() -> bitstring().
 handle_ping() ->
 	<<"pong">>.
 
+-spec handle_banks() -> #posm_bank{}.
 handle_banks() -> 
 	Query = qlc:q([B || B <- mnesia:table(posm_bank)]),
 	mnesia:sync_dirty(fun() -> qlc:e(Query) end).

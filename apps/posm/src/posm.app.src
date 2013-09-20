@@ -19,7 +19,9 @@
           {mnesia_dir, "/Users/frepond/posm/data"},
           {tcp_pool_size, 100},
           {posm_port, 5555},
+          %% database connection & queries
           {conn_string, "dsn=posm"},
-          {select_banks, "select * from dbo.bank"}
+          {select_banks, "select * from dbo.bank"},
+          {select_accounts, "select * from dbo.account"}
         ]}
  ]}.

@@ -3,7 +3,14 @@
 				  }).
 
 %% tables bank and account
--record(posm_bank, {cubco    :: string(),	 % Identificador del Banco
-			        nombco   :: string(),	 % Nombre del Banco
-			        accounts ::list()        % Cuentas del banco [{cubcta, nro_cta, nro_cbu}]
-			  	   }).
+-record(posm_bank_account, {
+		cubcta  :: bitstring(),
+		nro_cta	:: bitstring(),
+		nro_cbu :: bitstring()
+	}).
+
+-record(posm_bank, {
+		cubco    :: bitstring(),	 			% Bank Id
+		nombco   :: bitstring(),	 			% Bank description
+		accounts :: list()  % Bank account [{cubcta, nro_cta, nro_cbu}]
+	}).

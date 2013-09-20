@@ -2,7 +2,7 @@
 {application, posm_rest,
  [
   {description, "posm_rest"},
-  {vsn, "1"},
+  {vsn, "0.0.1"},
   {modules, []},
   {registered, []},
   {applications, [
